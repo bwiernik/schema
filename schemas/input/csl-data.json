@@ -238,9 +238,6 @@
             "comma-suffix": {
               "type": ["string", "number", "boolean"]
             },
-            "static-ordering": {
-              "type": ["string", "number", "boolean"]
-            },
             "institution": {
               "title": "Literal name text; should not be parsed",
               "description": "Use for institutional creator names; e.g. 'National Institutes of Health'",
@@ -257,12 +254,19 @@
               "type": "string"
             },
             "parse-names": {
+              "title": "Should given and family be parsed for particles and suffixes",
+              "description": "If 'false', do not parse name fields.",
               "type": "boolean"
             },
             "uncertain": {
               "title": "Indicates uncertain authorship",
               "description": "E.g. rendered as '[Smith, J.?]'",
               "type": "boolean"
+            },
+            "language": {
+              "title": "The language of the name, defaults to item 'language'",
+              "description": "Used to control name sorting and shortening for styles with language-specific name rules.",
+              "type": "string"
             }
           },
           "additionalProperties": false
